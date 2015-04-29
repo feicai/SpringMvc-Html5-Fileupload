@@ -38,9 +38,9 @@ function fileupload(){
 
 function getFileInfo(){
 	file = document.getElementById("myFile").files[0];
-	var fileSize = Math.round(file.size/1024);
+	var fileSize = (file.size/1024).toFixed(2);
 	if(fileSize >= 1024){
-		fileSize = Math.round(fileSize/1024)+"M";
+		fileSize = (fileSize/1024).toFixed(2)+"M";
 	}else{
 		fileSize = fileSize+"K";
 	}
